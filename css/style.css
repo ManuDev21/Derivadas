@@ -1,0 +1,69 @@
+body {
+    background: linear-gradient(90deg, #0f172a, #1e293b);
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    max-width: 600px;
+    background: rgba(30, 41, 59, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+    transition: transform 0.3s ease-in-out;
+}
+
+.container:hover {
+    transform: scale(1.02);
+}
+
+.titulo {
+    text-shadow: 0 0 10px cyan, 0 0 20px cyan;
+}
+
+.input-estilizado {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: #fff;
+    box-shadow: 0 0 5px cyan;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.input-estilizado:focus {
+    outline: none;
+    box-shadow: 0 0 15px cyan;
+}
+
+.boton-gelatina {
+    background: linear-gradient(45deg, cyan, blue);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 255, 255, 0.4);
+    animation: neon 1.5s infinite alternate;
+}
+
+.boton-gelatina:hover {
+    transform: scale(1.1);
+    animation: gelatina 0.6s ease-in-out;
+}
+
+@keyframes neon {
+    from {
+        box-shadow: 0 0 10px cyan;
+    }
+    to {
+        box-shadow: 0 0 20px cyan;
+    }
+}
+
+@keyframes gelatina {
+    0%, 100% { transform: scale(1); }
+    25% { transform: scale(1.1, 0.9); }
+    50% { transform: scale(0.9, 1.1); }
+    75% { transform: scale(1.05, 0.95); }
+}
